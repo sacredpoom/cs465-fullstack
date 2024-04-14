@@ -1,5 +1,5 @@
 <div class="col-md-4">
-    <h2 class="text-center">Edit Trip</h2>
+    <h2 class="text-center">Delete Trip</h2>
     <form *ngIf="editForm" [formGroup]="editForm" (ngSubmit)="onSubmit()">
     
      <div class="form-group">
@@ -99,6 +99,6 @@
        </div>
      </div>
     
-     <button type="submit" class="btn btn-info">Save</button>
+     <button type="submit" class="btn btn-danger">Delete Trip</button>
     </form>
 </div>

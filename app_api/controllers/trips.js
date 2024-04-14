@@ -63,7 +63,7 @@ const tripsAddTrip = async (req, res) => {
     });
 };
 
-// PUT: /trips/:triCode - Adds a new Trip
+// PUT: /trips/:tripCode - Adds a new Trip
 const tripsUpdateTrip = async(req, res) => {
     const q = await Model
       .findOneAndUpdate(
@@ -93,9 +93,23 @@ const tripsUpdateTrip = async(req, res) => {
       }
 };
 
+// DELETE: /trips/:tripCode - Deletes a Trip
+const tripsDeleteTrip = async (req, res) => {
+    try {
+        const result = await Model.findOneAndDelete({ code: req.params.tripCode });
+        if (!result) { // No document found to delete
+            return res.status(404).json({ message: "Trip not found with code " + req.params.tripCode });
+        }
+        res.status(200).json({ message: "Trip deleted successfully", trip: result });
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting trip", error: error });
+    }
+};
+
 module.exports = {
     tripsList,
     tripsFindByCode,
     tripsAddTrip,
-    tripsUpdateTrip
+    tripsUpdateTrip,
+    tripsDeleteTrip
 };
