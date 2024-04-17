@@ -101,7 +101,7 @@ export class DeleteTripComponent implements OnInit {
           .subscribe({
             next: (value: any) => {
               console.log('Trip deleted successfully:', value);
-              this.router.navigate(['/']); // Navigate after successful deletion
+              this.router.navigate(['list-trips']); // Navigate after successful deletion
             },
             error: (error: any) => {
               console.error('Error during deletion:', error);

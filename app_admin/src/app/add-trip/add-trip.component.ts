@@ -44,7 +44,7 @@ export class AddTripComponent implements OnInit {
       .subscribe( {
         next: (data: any) => {
           console.log(data);
-          this.router.navigate(['']);
+          this.router.navigate(['list-trips']);
         },
         error: (error: any) => {
           console.log('Error:' + error);
@@ -54,4 +54,3 @@ export class AddTripComponent implements OnInit {
   // get the form short name to acces the form fields
   get f() { return this.addForm.controls; }
 }
-
