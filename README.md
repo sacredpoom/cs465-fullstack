@@ -11,7 +11,8 @@ The administration portion of the Travlr web application is built using Angular 
  the SPA implements a user authentication process. Administrators are required to log in before they can manage content and user profiles for the Travlr Getaways application. The combination of Angular and Node.js offers a seamless and easy experience for managing the server data through a custom REST API.
 
  ### Link to Software Design Document here:
- [CS 405 Software Design Document - Joseph Veneski.pdf](CS%405%Software%Design%Document%-%Joseph%Veneski.pdf)
+ [CS 465 Software Design Document - Joseph Veneski.pdf](CS%20465%20Software%20Design%20Document%20-%20Joseph%20Veneski.pdf)
+
 
 **Architecture**\
 The Express Framework with an MVC pattern is ideal for server-side rendering of a multi-page experience. This design facilitates Search Engine Optimization through easier indexing and allows users to navigate directly to relevant pages which only need to load that specific page's data.
